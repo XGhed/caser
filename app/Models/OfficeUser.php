@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class OfficeUser extends Model
 {
     protected $guarded = [
 
@@ -13,8 +13,5 @@ class User extends Model
     		'updated_at'
     	];
 
-    public function offices()
-    {
-        return $this->belongsToMany('App\Models\Office');
-    }
+    protected $table = 'office_user';
 }
